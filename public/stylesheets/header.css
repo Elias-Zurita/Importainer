@@ -1,0 +1,45 @@
+a {
+    text-decoration: none; /* le saca el subrayado a todos los hipervinculos de etiqueta a */
+} 
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
+}
+header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+nav{
+    background-color: transparent;
+}
+
+.LogoHeader{
+    width: 20%;
+    padding-left: 5%;
+  }
+  .LogoHeader img{
+    width: 80%;
+    height: auto;
+  }
+.SeccionesHeader{
+    margin-left: auto; 
+    margin-right: auto;
+    display: flex;
+    list-style:none; /* quita punto de lista*/
+    width: 75%;
+    justify-content: space-around;
+    font-size: large;    
+}
+.SeccionesHeader a{
+    color: white;
+    font-weight: bold;
+}
+.SeccionesHeader a:hover{
+    color: orangered;
+    transition: 0.5s;
+}
+button .navbar-toggler{
+    color: red;
+}

@@ -1,9 +1,21 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: blue;
 }
 
 a {
   color: #00B7FF;
 }
+#carouselExampleIndicators{
+  overflow: hidden; /* la imagen no se sale de su caja al expandirse con el hover */
+  min-width: 100%;
+  position: relative;
+}
+.carousel{
+  margin: 0;
+  width: 100%;
+}
+.d-block{
+  height: 40em; /* alto de la imagen del carousel */
+  object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+}
+
