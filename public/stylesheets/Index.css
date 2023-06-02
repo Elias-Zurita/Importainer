@@ -18,4 +18,30 @@ a {
   height: 40em; /* alto de la imagen del carousel */
   object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
 }
+/* ---- TEXTOS DE CAROUSEL ---- */
+.carousel-caption{ 
+  border: red solid 5px;
+  text-align: start;
+  margin-bottom: 3%;
+}
+.servicioCarousel{
+  border: black solid 5px;
+  text-align: start;
+  width: 100%;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+.textoCarousel{
+  font-size: 1.5em;
+  color: white;
+}
+.botonesCarousel a{
+  color: white;
+}
+.botonesCarousel button{
+  width: 15%;
+  padding: 0.3%;
+  background: rgba(0,0,0,.8);
+}
 
