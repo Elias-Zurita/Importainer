@@ -1,0 +1,65 @@
+body {
+    color: blue;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+.contactoPadre{
+    display: flex;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+.contactoCampos{
+    border: violet solid;
+    color: black;
+    padding:2% 2% 0% 2%;
+    width: 50%;
+}
+.formularioContacto{
+    width: 100%;
+}
+.formularioContacto form{
+    display: flex;
+    flex-direction: column;
+}
+.formularioContacto input {
+    margin: 0% 0% 2% 0%;
+    padding: 0.2%;
+    border-radius: 5px;
+    border-color: black;
+}
+.formularioContacto textarea {
+    margin: 0% 0% 2% 0%;
+    padding: 0.5%;
+}
+.formularioContacto button {
+    color: white;
+    background-color: black;
+    padding: 0.5%
+}
+.formularioContacto div{
+    color: black;
+    padding: 0.5% 0% 0% 0%
+}
+.mapa{
+    border: blue solid;
+    padding:1%;
+    width: 50%;
+    text-align: center;
+}
+.textosContacto{
+    color: black;
+    border: blue solid;
+    padding: 0% 0% 0% 2%
+}
+.textosContacto li{
+    list-style-type: square;
+}
+.tituloContacto{
+    font-size: 1.5em;
+    color: black;
+    font-family: Open Sans,sans-serif;
+}
+
+
