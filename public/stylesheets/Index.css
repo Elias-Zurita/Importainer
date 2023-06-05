@@ -44,4 +44,22 @@ a {
   padding: 0.3%;
   background: rgba(0,0,0,.8);
 }
-
+.bannerNaranja{
+  border: black solid 10px;
+  display: flex;
+}
+.promoNaranja{
+  border: blue solid;
+  width: 50%;
+  padding-top: 5%;
+}
+.promoNaranja img{
+  width: 100%;
+}
+.imporSaleNaranja{
+  border: green solid;
+  width: 50%;
+}
+.imporSaleNaranja img{
+  width: 100%;
+}
