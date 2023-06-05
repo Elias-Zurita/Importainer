@@ -1,10 +1,12 @@
 body {
-  color: blue;
+  color: black;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
+
+/* --- SECCION CAROUSEL --- */
 #carouselExampleIndicators{
   overflow: hidden; /* la imagen no se sale de su caja al expandirse con el hover */
   min-width: 100%;
@@ -18,6 +20,7 @@ a {
   height: 40em; /* alto de la imagen del carousel */
   object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
 }
+
 /* ---- TEXTOS DE CAROUSEL ---- */
 .carousel-caption{ 
   border: red solid 5px;
@@ -63,8 +66,9 @@ a {
 .imporSaleNaranja img{
   width: 100%;
 }
+
+/* --- SECCION CAJAS CONTAINERS --- */
 .cajaContainerHome{
-  
   width:28%;
   display: flex;
   flex-direction: column;
@@ -138,4 +142,124 @@ a {
 }
 .botonesContainerHome a{
   color: white;
+}
+
+/* --- SECCION ACERCA --- */
+.acercaHome{
+  margin: 2% 0 2% 0;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: green solid;
+  padding-bottom: 3%;
+}
+.imagenYtextoAcerca{
+  border: blue solid;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 4% 2% 2% 2%;
+}
+.imagenAcercaHome{
+  width:50%;
+  text-align: center;
+}
+.imagenAcercaHome img{
+  width:90%;
+  border: yellow solid;
+}
+.textoAcercaHome{
+  width: 50%;
+  border: purple solid;
+  text-align: justify;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+.tituloAcerca{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.beneficiosAcerca{
+  border: #00B7FF solid;
+  width: 100%;
+  padding: 0% 4% 0% 4%;
+}
+.beneficiosTitulo{
+  font-size: xx-large;
+}
+.tarjetasBeneficios{
+  display: flex;
+  justify-content: space-around;
+  margin: 2% 0 2% 0;
+}
+.tarjetasBeneficios div{
+  border: white solid 1px;
+  width: 23%;
+  height: 200px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5%; /* centra el texto dentro de la tarjeta sobre el eje Y */ 
+}
+.botonBeneficios{
+  text-align: end;
+}
+.botonBeneficios button{
+  padding: 7px;
+  width: 15%;
+  color: white;
+  background-color:black;
+  border: #d93737 solid;
+}
+.serviciosTitulo{
+  font-size: xx-large;
+  margin: 0 0 1% 4%;
+  font-weight: bold;
+}
+.cajasServicios{
+  border: red solid 1px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3%;
+}
+.tarjetaServicios{
+  width: 25%;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  text-align: center;
+  padding: 1% 1% 0.5% 1%;
+}
+.imagenServicios img{
+  width: 30%;
+}
+.tituloServicio{
+  font-size: large;
+  font-weight: bold;
+}
+.textoServicio{
+  font-size:large
+}
+
+/* --- Seccion entregas --- */
+.tituloEntregasHome{
+  text-align: center;
+  font-size: x-large;
+}
+.seccionEntregasHome{
+  border: rgb(0, 183, 255) solid 1px;
+  margin-bottom: 5%;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  /* apila las cajas si no entran en la resolucion (img debe estar en px) */
+  justify-content: space-around;
+  padding: 0 2% 0 2%;
+}
+.tarjetasEntregasHome{
+  width: 24%;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  margin: 0.5% 0.5% 0.5% 0.5%;
+  height: 180px;
 }
