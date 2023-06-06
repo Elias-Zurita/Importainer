@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs') %>  <!--  Incluye el HEAD  -->
+  </head>
+
+  <header>
+    <%- include('../partials/header.ejs') %>  <!--  Incluye el HEADER  -->
+  </header>
+
+  <body>
+    
+
+  <br>
+  <br>
+  <br>
+  <br>
+  
+    
+    <!--  Cajas de containers -->
+    <% proyectos.forEach(function(proyecto){ %>
+    <div class="cajaContainerHome">
+      <div class="imagenContainerHome"><img src="/images/proyectos/<%= proyecto.imagenes %>"></div>
+      <div class="detalleContainerHome">
+        <div class="supHome">SUP: <i class="fa-solid fa-arrows-left-right-to-line"></i> 30m2</div>
+        <div class="supHome">AMB: <i class="fa-solid fa-bed"></i> 3</div>
+        <div class="supHome">BAÑO: <i class="fa-solid fa-shower"></i> 1</div>
+      </div>
+      <div class="casaHome">CASA CONTAINER 45 M2</div>
+      <div class="casaHome">¡ENTREGA PROGRAMADA!</div>
+      <div class="adhesionHome">Adhesión: $194.000,00</div>
+      <div class="cuotasHome">
+        <div class="tituloCuotasHome">CANTIDAD DE CUOTAS</div>
+        <div><input type="checkbox">&nbsp 120 cuotas</div>
+        <div><input type="checkbox">&nbsp 240 cuotas</div>
+      </div>
+      <div class="valoresCuotasHome">
+        <p>Cuotas de</p><p class="montoCuotaHome">$22222</p>
+        <p>Precio de Lista</p><p class="montoCuotaHome">55555</p>
+        <p>Precio Promoción(contado)</p><p class="montoCuotaHome">$666666</p>
+      </div>
+      <div class="botonesContainerHome">
+        <button class=""><a href="">VER MÁS</a>
+        <button class=""><a href="">CONSULTAR</a>
+      </div>
+    </div>
+    <% }) %>
+    
+  <br>
+  <br>
+  <br>
+  <br>
+
+  </body>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
+  </footer>
+
+</html>
