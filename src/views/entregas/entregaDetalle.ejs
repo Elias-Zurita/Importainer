@@ -10,28 +10,40 @@
 
   <body>
     
+    <div class="bannerEntregaDetalle">
+      <img src="/images/entregas/<%= entrega.imagenes %>">
+    </div>
 
-    <div class="">¡CONSTRUIMOS SUEÑOS!</div>
+    <div class="cajaDetalleEntregas">
+      <div class="tituloDetalleEntrega">¡ENTREGAMOS UNA <%= entrega.nombre %> CONTAINER DE <%= entrega.superficie %>m²!</div>
+      <p>Viajamos a <%= entrega.ubicacion %>, para realizar la entrega e instalación de una <%= entrega.Modelo.nombre %> container de <%= entrega.superficie %>m².</p>
+      <div class="videoEntregaDetalle">
+        <iframe  src="<%= entrega.video %>"  allowfullscreen></iframe>
+      </div>
 
+      <br>
 
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+      <div class="textoDetalle">
+        <p><%= entrega.descripcion %></p>
+        <p><strong>¡Así funciona nuestro sistema llave en mano! Nuestros clientes sólo deben estar listos para disfrutar de su <%= entrega.nombre %>.</strong></p>
+        <p><strong>DESDE IMPORTAINER S.A</strong></p>
+        <p>Felicitamos y agradecemos a nuestra cliente por confiarnos el sueño de adquirir...</p>
+        
+        <% if(entrega.Modelo.id == [1||2||3||4||5||6]){ %>
+        <p><strong>¡SU CASA PROPIA!</strong></p>  
+        <% } else if (entrega.Modelo.id == 9){ %>
+        <p><strong>¡SU PROPIO FOODTRUCK!</strong></p>  
+        <% } else if (entrega.Modelo.id == 10){ %>
+        <p><strong>¡SU PROPIA OFICINA!</strong></p>  
+        <% } %>
+      </div>
+    </div>
 
-
-
-    sddvssdsdvsdvsdvsdds
-    sddvssdsdvsdvsdvsdds
-    sddvssdsdvsdvsdvsdds
-    sddvssdsdvsdvsdvsdds
-
-    <div><strong><%= entrega.nombre %></strong></div>
-    <div><strong><%= entrega.superficie %></strong></div>
-    <div><strong><%= entrega.imagenes %></strong></div>
-
+    <div class="solicitaDetalle">
+      <div>¡EMPEZÁ A CONSTRUIR TU SUEÑO!</div>
+      <button><a>¡SOLICITÁ TU PRESUPUESTO! <i class="fa-solid fa-message"></i></a></button>
+    </div>
+      
   </body>
 
   <footer>
