@@ -42,6 +42,9 @@ body {
     color: black;
     padding: 0.5% 0% 0% 0%
 }
+.formularioContacto textarea{
+    resize: none /* no permite agrandar o achicar el text area */
+}
 .mapa{
     border: blue solid;
     padding:1%;

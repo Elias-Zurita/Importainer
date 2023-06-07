@@ -28,7 +28,7 @@ INSERT INTO categoria (`id`, `nombre`, `created_at`, `updated_at`) VALUES
 
 
 DROP TABLE IF EXISTS proyecto;
--- Creacion de tabla de producto
+-- Creacion de tabla de proyecto
 CREATE TABLE IF NOT EXISTS proyecto (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   nombre varchar(200) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS proyecto (
   updated_at TIMESTAMP
 );
 
--- Ingreso de datos a producto (es importante que vaya ultima ya que tiene datos con claves foraneas, y si esas tablas no tienen insertados datos no funciona la db)
+-- Ingreso de datos a proyecto (es importante que vaya ultima ya que tiene datos con claves foraneas, y si esas tablas no tienen insertados datos no funciona la db)
 INSERT INTO `proyecto` (`id`, `nombre`, `precio`, `descripcion`, `superficie`, `ambientes`, `baños`, `adhesion`, `resumen`, `detalle_baño`, `cocina`, `aberturas`, `revestimientos`, `equipamiento`, `instalacion_electrica`, `instalacion_agua`, `tipos_de_pisos`, `video`, `imagenes`, `categoria_id`, `created_at`, `updated_at`) VALUES
 (1, 'Casa container 15M2', 4769333, 'Si estás buscando una casa económica y de rápida realización, nuestra casa classic de 15m² es la opción ideal para vos, es amplia, luminosa y cuenta con la capacidad perfecta para habitar con todas las comodidades. Posee aislación térmica y acústica de paredes, cuenta con instalación eléctrica y de agua; viene equipada con el mobiliario necesario para cocina y baños. Además, es completamente personalizable.', '15', '2', '1', '165000', '2 Ambientes, 1 Baño, Cocina Comedor', 'Vanitory, lavamanos, inodoro, ducha en box de 0.80 x 0.80 cm y mampara de vidrio. Griferias Marca (Pazza, Moza o Hidro) *El Baño contará con revestimiento cerámico (a media altura, box de ducha de piso a techo).', '1 Bajo mesada de 1.20m hasta 1.60m. Mesada de granito sintético de 1.20m hasta 1.60m. Bacha de acero inoxidable', 'Ventanas Línea Herrero con rejas como medida de seguridad. 1 Ventanas de 1.50 x 1.10 m con traba interior. Ventanas de 0.60 x 0.40 m para baño. Ventanas de 1.00 x 0.40 hasta 1.50 x 0.40 m para cocina. 1 Puerta de entrada doble chapa o mitad vidrio y mitad aluminio. Opcional: El Cliente tendra la opción de cambiar la puerta de ingreso por ventana balcon 1.50 x 2.00 m Opcional: 1 Portón Romano de 1.50 x 2.00 m.', 'Interior: Placa de yeso color blanco (Durlock) o como opción machimbre de PVC color blanco. Exterior: Esmalte sintético, color a eleccion de línea Emapi o Tersuave, colores estándar a decidir por el cliente. Aislación térmica y acústica: Lana de vidrio de 50mm.', '1 Termotanque eléctrico de 30 litros. 1 Aires acondicionados Split de 2200 F (frio/calor)', 'Instalación reglamentaría por cañería emburidas, con 10 tomas distribuidos entre tomacorrientes simples y tomacorrientes dobles.Caja para térmicas de luz con 12 módulos. 3 Llaves de encendido. 3 Luces Led en cielorraso de alta calidad y de bajo consumo. 3 Luces exteriores tipo tortuga de PVC', 'Fría y Caliente. Caños termofusión de 20. Desagues Aguaduc de 110, 40, 50 y 60.', 'Vinílico símil madera (alto tránsito) Hidrolaqueado, pisos original del contenedor con dos manos de hidrolaca. Flotante simil madera (a cotizar).', 'casa-container-15m2-classic-importainer.mp4', 'casa-container-15-m2-classic-importainer.jpg','1', '2023-06-06 10:00:00', '2023-06-06 10:00:00');
 
@@ -62,3 +62,54 @@ INSERT INTO `proyecto` (`id`, `nombre`, `precio`, `descripcion`, `superficie`, `
 -- Creacion de Foreign Key proyecto
 ALTER TABLE proyecto
 ADD FOREIGN KEY (categoria_id) REFERENCES categoria(id);
+
+
+
+-- ------------------------------------------------------------------------- ----------------------------------------------------------------
+
+
+DROP TABLE IF EXISTS modelo;
+-- Creacion de tabla de modelo
+CREATE TABLE IF NOT EXISTS modelo (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre varchar(100) NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT NULL,
+  updated_at TIMESTAMP NULL DEFAULT NULL
+);
+
+-- Ingreso de datos a modelo
+INSERT INTO modelo (`id`, `nombre`, `created_at`, `updated_at`) VALUES
+(1, 'Casa Classic', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(2, 'Casa Comfort', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(3, 'Casa Premium', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(4, 'Casa de Campo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(5, 'Casa Tiny', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(6, 'Duplex', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(7, 'Combo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(8, 'Exterior', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(9, 'FoodTruck', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(10, 'Oficinas', '2023-06-06 09:00:00', '2023-06-06 09:00:00');
+
+
+DROP TABLE IF EXISTS entrega;
+-- Creacion de tabla de entrega
+CREATE TABLE IF NOT EXISTS entrega (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre varchar(200) NOT NULL,
+  descripcion text NOT NULL,
+  superficie INT NOT NULL,
+  ubicacion varchar(200) NOT NULL,
+  video varchar(200) NOT NULL,
+  imagenes varchar(200) NOT NULL,
+  modelo_id INT UNSIGNED NOT NULL,
+  created_at TIMESTAMP DEFAULT current_timestamp(),
+  updated_at TIMESTAMP
+);
+
+-- Ingreso de datos a entrega (es importante que vaya ultima ya que tiene datos con claves foraneas, y si esas tablas no tienen insertados datos no funciona la db)
+INSERT INTO `entrega` (`id`, `nombre`, `descripcion`, `superficie`, `ubicacion`, `video`, `imagenes`, `modelo_id`, `created_at`, `updated_at`) VALUES
+(1, 'CASA', 'Nuestro cliente Alfredo buscaba una solución habitacional cómoda y de rápida construcción, que le permitiera mudarse lo antes posible a su lugar soñado en Chapadmalal. En importainer encontró la solución a su necesidad, nuestra alta experiencia en construcciones con containers y numerosas entregas le ayudaron a tomar la decisión de dejar en nuestras manos el sueño de su casa propia.Por nuestra parte fuimos responsables de la dirección y mano de obra completa de la casa container: acondicionamos el contenedor y equipamos los distintos ambientes con el mobiliario solicitado por el cliente. Además, fuimos responsables del traslado de su vivienda container desde nuestra fábrica ubicada en Buenos Aires hasta su instalación completa en el terreno, ubicado en Chapadmalal, Provincia de Buenos Aires.¡Así funciona nuestro sistema llave en mano! Nuestros clientes solo deben estar listos para disfrutar de mudarse a su nueva casa.Desde Importainer S.A. Felicitamos y agradecemos a nuestra cliente por confiarnos la construcción de su hermosa vivienda.', '15','Chapadmalal','https://www.youtube.com/watch?v=WXRArcY70TQ&ab_channel=ImportainerS.A.','entrega-chapadmalal-casa-container-15-m2-classic-importainer-1.jpg','1','2023-06-06 10:00:00', '2023-06-06 10:00:00');
+
+-- Creacion de Foreign Key proyecto
+ALTER TABLE entrega
+ADD FOREIGN KEY (modelo_id) REFERENCES modelo(id);
