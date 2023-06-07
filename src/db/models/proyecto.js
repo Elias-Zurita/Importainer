@@ -22,6 +22,9 @@ module.exports = function(sequelize, dataTypes){
             baños: {
                 type: dataTypes.INTEGER 
             },
+            ambientes: {
+                type: dataTypes.INTEGER 
+            },
             adhesion:{
                 type: dataTypes.INTEGER
             },
