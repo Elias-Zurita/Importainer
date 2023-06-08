@@ -22,7 +22,7 @@ module.exports = function(sequelize, dataTypes){
             video:{
                 type: dataTypes.STRING
             },
-            imagenes: {
+            imagen: {
                 type: dataTypes.STRING 
             },
             modelo_id:{

@@ -1,0 +1,10 @@
+.createEntregas{
+    display: flex;
+    border: red solid;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}

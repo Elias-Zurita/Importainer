@@ -22,6 +22,22 @@ const entregasController = {
             .then(function(values){
                 res.render("entregas/entregaDetalle", {entrega:values[0], modelos: values[1]})
             })
+    }, 
+    crear: async function(req, res) {
+        const modelos = await db.Modelo.findAll();
+            return res.render("entregas/entregaCreate", {modelos})
+    },
+    guardado: async function(req, res) {
+        const entregaCreada = await db.Entrega.create({
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            superficie: req.body.superficie,
+            ubicacion: req.body.ubicacion,
+            video: req.body.video,
+            modelo_id: req.body.modelo,
+            imagen: req.file.filename
+        })
+        res.redirect("/entregas/list");
     }
  }
 

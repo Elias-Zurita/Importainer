@@ -100,14 +100,14 @@ CREATE TABLE IF NOT EXISTS entrega (
   superficie INT NOT NULL,
   ubicacion varchar(200) NOT NULL,
   video varchar(200) NOT NULL,
-  imagenes varchar(200) NOT NULL,
+  imagen varchar(200) NOT NULL,
   modelo_id INT UNSIGNED NOT NULL,
   created_at TIMESTAMP DEFAULT current_timestamp(),
   updated_at TIMESTAMP
 );
 
 -- Ingreso de datos a entrega (es importante que vaya ultima ya que tiene datos con claves foraneas, y si esas tablas no tienen insertados datos no funciona la db)
-INSERT INTO `entrega` (`id`, `nombre`, `descripcion`, `superficie`, `ubicacion`, `video`, `imagenes`, `modelo_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `entrega` (`id`, `nombre`, `descripcion`, `superficie`, `ubicacion`, `video`, `imagen`, `modelo_id`, `created_at`, `updated_at`) VALUES
 (1, 'CASA', 'Nuestro cliente Alfredo buscaba una solución habitacional cómoda y de rápida construcción, que le permitiera mudarse lo antes posible a su lugar soñado en Chapadmalal. En importainer encontró la solución a su necesidad, nuestra alta experiencia en construcciones con containers y numerosas entregas le ayudaron a tomar la decisión de dejar en nuestras manos el sueño de su casa propia.Por nuestra parte fuimos responsables de la dirección y mano de obra completa de la casa container: acondicionamos el contenedor y equipamos los distintos ambientes con el mobiliario solicitado por el cliente. Además, fuimos responsables del traslado de su vivienda container desde nuestra fábrica ubicada en Buenos Aires hasta su instalación completa en el terreno, ubicado en Chapadmalal, Provincia de Buenos Aires.', '15','Chapadmalal','https://www.youtube.com/embed/WXRArcY70TQ','entrega-chapadmalal-casa-container-15-m2-classic-importainer-1.jpg','1','2023-06-06 10:00:00', '2023-06-06 10:00:00');
 
 -- Creacion de Foreign Key proyecto
