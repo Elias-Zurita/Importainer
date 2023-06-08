@@ -1,0 +1,40 @@
+.tituloEntregaList{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px
+}
+.cajaEntregaList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    position: relative;
+    width: 30%;
+    margin-top:40px;
+    cursor: pointer;
+    text-transform:uppercase;
+    border: green solid;
+}
+  .imagenEntregaList img{
+    width: 100%;
+}
+.overlayEntregas{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background: rgba(40, 53, 50, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+.overlayEntregas:hover{
+    opacity: 1;
+}

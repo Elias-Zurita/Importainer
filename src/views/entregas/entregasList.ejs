@@ -10,27 +10,20 @@
 
   <body>
     
-
-    <div class="">¡CONSTRUIMOS SUEÑOS!</div>
-
-    <!--  Cajas de containers CON CAMPOS DINAMICOS LISTOS -->
-    <% entregas.forEach(function(entrega){ %>
-      <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/entregas/<%= entrega.imagen %>"></div>
-        <div class="detalleContainerHome">
-          <div class="supHome">SUP: <i class="fa-solid fa-arrows-left-right-to-line"></i> <%= entrega.superficie %></div>
-        </div>
-        <div class="casaHome"><%= entrega.nombre %></div>
-        <div class="casaHome">¡ENTREGA PROGRAMADA!</div>
-        <div><button><a href="/entregas/detalle/<%=entrega.id%>">IR AL DETALLE</a></button></div>
-      </div>
-      <% }) %>
+    <div class="tituloEntregaList">¡CONSTRUIMOS SUEÑOS!</div>
     
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+ 
+      <!--  Cajas de containers CON CAMPOS DINAMICOS LISTOS -->
+      <% entregas.forEach(function(entrega){ %>
+        <div class="cajaEntregaList">
+          <a href="/entregas/detalle/<%= entrega.id %>"><div class="imagenEntregaList"><img src="/images/entregas/<%= entrega.imagen %>"></div>
+          <div class="overlayEntregas">
+            <strong><div><%= entrega.nombre %> <%= entrega.superficie %>M<sup>2</sup></div></strong>
+            <strong><div><%= entrega.ubicacion %></div></strong>
+          </div></a>
+        </div>
+        <% }) %>
+
 
   </body>
 
