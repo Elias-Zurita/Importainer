@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs') %>  <!--  Incluye el HEAD  -->
+  </head>
+
+  <header>
+    <%- include('../partials/header.ejs') %>  <!--  Incluye el HEADER  -->
+  </header>
+
+  <body>
+    
+    <form action="/entregas/edit/<%= entrega.id %>" method="POST" class="formularioLog" enctype="multipart/form-data">
+        <div class="createEntregas">
+
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="form-control" value="<%= entrega.nombre %>">
+
+            <label>Descripción</label>
+            <input type="text" name="descripcion" class="form-control" value="<%= entrega.descripcion %>">
+            
+            <label>Superficie</label>
+            <input type="text" name="superficie" class="form-control" value="<%= entrega.superficie %>">
+
+            <label>Ubicación</label>
+            <input type="text" name="ubicacion" class="form-control" value="<%= entrega.ubicacion %>">
+
+            <label>Enlace del video de youtube</label>
+            <input type="text" name="video" class="form-control" value="<%= entrega.video %>">
+
+            <label>Modelo</label>
+            <select 
+                name="modelo" 
+                class="form-select">
+                    <option value=""></option>
+                        <% modelos.forEach(modelo=>{ %> 
+                            <option value= "<%= modelo.id %>"
+                            <%= locals.oldData && (modelo === oldData.modelo) ? 'select' : null %> >    
+                            <%= modelo.nombre %>    
+                            </option>
+                        <% }) %>
+            </select>
+
+            <label>Imagen</label>
+            <input 
+                type="file"
+                name="imagen"
+                class="form-control">
+
+        </div>
+
+        <div class="botonCreate">
+          <button 
+              type="submit">EDITAR PRODUCTO
+          </button>
+      </div>
+
+    </form>
+    
+  </body>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
+  </footer>
+
+</html>

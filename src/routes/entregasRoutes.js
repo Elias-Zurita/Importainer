@@ -10,5 +10,7 @@ router.get("/list", entregasController.list);
 router.get("/detalle/:id", entregasController.detalle);
 router.get("/create", entregasController.crear);
 router.post("/create", uploadFile.single("imagen"), entregasController.guardado);
+router.get("/edit/:id", entregasController.editar);
+router.post("/edit/:id",uploadFile.single("imagen"), entregasController.actualizar);
 
 module.exports = router;

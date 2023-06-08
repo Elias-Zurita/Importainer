@@ -38,7 +38,34 @@ const entregasController = {
             imagen: req.file.filename
         })
         res.redirect("/entregas/list");
+    },
+    editar: async function(req, res) {
+        let pedidoEntrega = db.Entrega.findByPk(req.params.id, {
+        include:[{association: "Modelo"}]});
+        
+        let pedidoModelo = db.Modelo.findAll();
+        
+        Promise.all([pedidoEntrega, pedidoModelo])
+            .then(function(values){
+                res.render("entregas/entregaEditForm", {entrega:values[0], modelos: values[1]})
+            })
+    },
+    actualizar: function(req, res) {
+        db.Entrega.update({
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            superficie: req.body.superficie,
+            ubicacion: req.body.ubicacion,
+            video: req.body.video,
+            modelo_id: req.body.modelo,
+            imagen: req.file ? req.file.filename:entrega.imagen 
+        },{
+            where: {
+                id:req.params.id
+            }
+        });
+        res.redirect("/entregas/list")
     }
- }
+}
 
 module.exports = entregasController;
