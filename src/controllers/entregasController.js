@@ -65,6 +65,15 @@ const entregasController = {
             }
         });
         res.redirect("/entregas/list")
+    },
+    eliminar: async function (req, res, next) {
+        const entrega = await db.Entrega.findByPk(req.params.id)
+        await db.Entrega.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/entregas/list")
     }
 }
 

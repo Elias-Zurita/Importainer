@@ -12,5 +12,6 @@ router.get("/create", entregasController.crear);
 router.post("/create", uploadFile.single("imagen"), entregasController.guardado);
 router.get("/edit/:id", entregasController.editar);
 router.post("/edit/:id",uploadFile.single("imagen"), entregasController.actualizar);
+router.post("/delete/:id", entregasController.eliminar);
 
 module.exports = router;
