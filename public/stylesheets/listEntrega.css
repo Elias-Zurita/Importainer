@@ -16,7 +16,6 @@
     width:550px; /* Debe estar en PX para que las cajas se desplazen hacia abajo al achicarse la resolucion */
     position: relative;
     box-shadow: 0 0 5px rgba(0,0,0,.5);
-    position: relative;
     margin-top:20px;
     cursor: pointer;
     text-transform:uppercase;

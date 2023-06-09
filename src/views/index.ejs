@@ -160,12 +160,43 @@
 
       <div class="beneficiosAcerca">
         <div class="beneficiosTitulo">¡CONOCÉ NUESTROS BENEFICIOS!</div>
-        <div class="tarjetasBeneficios">
-          <div>PLAN DE FINANCIACIÓN EN PESOS</div>
-          <div>PAGO EN CUOTAS</div>
-          <div>SISTEMA LLAVE EN MANO</div>
-          <div>SHOWROOM</div>
+        
+        <!--  TARJETAS GIRATORIAS  -->
+        <div class="cardPadre">
+          <div class="card">
+            <div class="face front">
+              <p>PLAN DE FINANCIACIÓN EN PESOS</p>
+            </div>
+            <div class="face back">
+              <p>Te ofrecemos la oportunidad de construir tu proyecto 100% financiado.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face front">
+              <p>PAGO EN CUOTAS</p>
+            </div>
+            <div class="face back">
+              <p>Contamos con excelentes planes de pago en cuotas, ajustados a tu necesidad.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face front">
+              <p>SISTEMA LLAVE EN MANO</p>
+            </div>
+            <div class="face back">
+              <p>Entregamos las llaves de tu proyecto ¡Listo para habitar!</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face front">
+              <p>SHOWROOM</p>
+            </div>
+            <div class="face back">
+              <p>Te ofrecemos un espacio donde podrás conocer cómo es nuestro sistema constructivo y asesorarte en tu compra.</p>
+            </div>
+          </div>
         </div>
+ 
         <div class="botonBeneficios"><button>CONTACTATE CON NOSOTROS <i class="fa-brands fa-whatsapp"></i></button></div>
       </div>
     </div>
@@ -195,55 +226,19 @@
 
     <!-- Seccion de Entregas  -->
     <div class="tituloEntregasHome">ENTREGAS Y TESTIMONIOS</div>
+
     <div class="seccionEntregasHome">
+      <% entregas.forEach(function(entrega){ %>
       <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
+        <a href="/entregas/detalle/<%= entrega.id %>">
+        <img src="/images/entregas/<%= entrega.imagen %>">
+        <div class="subtituloEntregasIndex">
+          <div><%= entrega.nombre %></div>
+          <div><%= entrega.ubicacion %></div>
         </div>
+        </a>
       </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
-      <div class="tarjetasEntregasHome">
-        <div class="entregaHome">
-          <p>CASA 15M2</p>
-          <p>CHAPADMALAL</p>
-        </div>
-      </div>
+      <% }) %>
     </div>
     
 
