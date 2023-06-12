@@ -15,5 +15,6 @@ router.get("/exteriores", proyectosController.exteriores);
 router.get("/emprendimientos", proyectosController.oficinas);
 router.get("/oficinas", proyectosController.classic);
 
+router.get("/create", proyectosController.crear);
 
 module.exports = router;

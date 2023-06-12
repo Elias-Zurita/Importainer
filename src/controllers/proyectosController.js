@@ -132,6 +132,10 @@ const proyectosController = {
             res.render("proyectos/proyectosList", {proyectos:proyectos})
         })
     },
+    crear: async function(req, res) {
+        const categorias = await db.Categoria.findAll();
+            return res.render("proyectos/proyectosCreate", {categorias})
+    },
  }
 
 module.exports = proyectosController;
