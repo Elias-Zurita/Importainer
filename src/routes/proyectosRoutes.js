@@ -6,7 +6,10 @@ const proyectosController = require("../controllers/proyectosController");
 // Middlewares
 const uploadFile = require('../middlewares/multerMiddlewareProyecto');
 
+// Vista de proyectos
 router.get("/categorias", proyectosController.categorias);
+
+// Listado de proyectos por categoria
 router.get("/classic", proyectosController.classic);
 router.get("/comfort", proyectosController.comfort);
 router.get("/premium", proyectosController.premium);
@@ -18,7 +21,9 @@ router.get("/exteriores", proyectosController.exteriores);
 router.get("/emprendimientos", proyectosController.oficinas);
 router.get("/oficinas", proyectosController.classic);
 
+//  CRUD proyectos
 router.get("/create", proyectosController.crear);
 router.post("/create", uploadFile.single("imagen"), proyectosController.guardado);
+router.get("/detalle/:id", proyectosController.detalle);
 
 module.exports = router;

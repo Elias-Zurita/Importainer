@@ -24,16 +24,26 @@
       <div class="adhesionHome">Adhesión: $<%= proyecto.adhesion %></div>
       <div class="cuotasHome">
         <div class="tituloCuotasHome">CANTIDAD DE CUOTAS</div>
-        <div><input type="checkbox">&nbsp 120 cuotas</div>
-        <div><input type="checkbox">&nbsp 240 cuotas</div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              &nbsp 120 cuotas
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              &nbsp 240 cuotas
+            </label>
+          </div>
       </div>
       <div class="valoresCuotasHome">
-        <p>Cuotas de</p><p class="montoCuotaHome">$22222</p>
+        <p>Cuotas de</p><p class="montoCuotaHome">$<%= (proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050 %></p> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
         <p>Precio de Lista</p><p class="montoCuotaHome"><%= proyecto.precio %></p>
         <p>Precio Promoción(contado)</p><p class="montoCuotaHome">$<%= (proyecto.precio)*0.90 %></p> <!--  Precio con descuento del 10% -->
       </div>
       <div class="botonesContainerHome">
-        <button class=""><a href="">VER MÁS</a>
+        <button class=""><a href="/proyectos/detalle/<%= proyecto.id %>">VER MÁS</a>
         <button class=""><a href="">CONSULTAR</a>
       </div>
     </div>

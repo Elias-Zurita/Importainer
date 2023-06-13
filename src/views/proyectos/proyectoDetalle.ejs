@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs') %>  <!--  Incluye el HEAD  -->
+  </head>
+
+  <header>
+    <%- include('../partials/header.ejs') %>  <!--  Incluye el HEADER  -->
+  </header>
+
+  <body>
+    
+    <div class="detalleProyectos">
+
+      <div class="proyectoNombreDetalle"><%= proyecto.nombre %></div>
+      
+      <div class="proyectoCajaPadreDetalle">
+          <div class="proyectoCajaHijo">
+            <div class="vistasProyecto">
+              <div>EXTERIOR</div>
+              <div>INTERIOR</div>
+              <div>PLANOS</div>
+            </div>
+            <div class="imagenesProyecto">
+              <img src="/images/proyectos/<%= proyecto.imagenes %>">
+            </div>
+          </div>
+          <div class="proyectoCajaHijo">
+            <div><strong>DESCRIPCIÓN</strong></div>
+            <div><%= proyecto.descripcion %></div>
+            <br>
+            <div><strong>ADHESIÓN</strong></div>
+            <div>Precio: <strong><%= proyecto.adhesion %></strong></div>
+            <br>
+            <div><strong>CANTIDAD DE CUOTAS:</strong></div>
+            <div class="cajaCuotasDetalle">
+                <div class="cuotasProyecto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          &nbsp 120 cuotas
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          &nbsp 240 cuotas
+                        </label>
+                      </div>
+                </div>
+                <div class="valorCuota">$<%= (proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050 %></div> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
+            </div>
+            <div class="botonFinanciala">
+              <button><strong><a>FINANCIALA HOY! <i class="fa-solid fa-message"></i></a></strong></button>
+            </div>
+          </div>
+      </div>
+
+      <div class="fichaTitulo">Ficha Técnica</div>
+
+      <div class="fichaTecnica">
+        <div class="fichaSecciones">
+          <ul>
+            <li>Resumen</li>
+            <li>Baño</li>
+            <li>Cocina</li>
+            <li>Aberturas</li>
+            <li>Revestimiento</li>
+            <li>Equipamiento</li>
+            <li>Instalacion Eléctrica</li>
+            <li>Instalacion agua</li>
+            <li>Pisos</li>
+          </ul>
+        </div>
+        <div class="fichaInfo">
+          <p>sdfsdffddfsdfs</p>
+          <p>sdfsdffddfsdfs</p>
+          <p>sdfsdffddfsdfs</p>
+          <p>sdfsdffddfsdfs</p>
+          <p>sdfsdffddfsdfs</p>
+        </div>
+      </div>
+
+      <div class="videoProyecto">
+        <video src="/videos/<%= proyecto.video %>" controls></video> <!--  "controls" permite reproducir y controlar el video -->
+      </div>
+
+    </div>
+
+  </body>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
+  </footer>
+
+</html>

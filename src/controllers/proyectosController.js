@@ -154,11 +154,22 @@ const proyectosController = {
             instalacion_electrica:req.body.instalacion_electrica,
             instalacion_agua:req.body.instalacion_agua, 
             tipos_de_pisos: req.body.tipos_de_pisos,
-            
+            // video: req.file.filename, con esto no anda
             imagenes: req.file.filename,
             categoria_id: req.body.categoria            
         })
         res.redirect("/proyectos/categorias"); 
+    },
+    detalle: function(req, res) {
+        let pedidoProyecto = db.Proyecto.findByPk(req.params.id, {
+            include:[{association: "Categoria"}]});
+            
+        let pedidoCategoria = db.Categoria.findAll();
+        
+        Promise.all([pedidoProyecto, pedidoCategoria])
+            .then(function(values){
+                res.render("proyectos/proyectoDetalle", {proyecto:values[0], categorias: values[1]})
+            })
     }
  }
 

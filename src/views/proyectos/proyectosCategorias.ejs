@@ -239,46 +239,11 @@
       </div>
     </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  
-    
-    <!--  Cajas de containers CON CAMPOS DINAMICOS LISTOS -->
-    <% proyectos.forEach(function(proyecto){ %>
-    <div class="cajaContainerHome">
-      <div class="imagenContainerHome"><img src="/images/proyectos/<%= proyecto.imagenes %>"></div>
-      <div class="detalleContainerHome">
-        <div class="supHome">SUP: <i class="fa-solid fa-arrows-left-right-to-line"></i> <%= proyecto.superficie %></div>
-        <div class="supHome">AMB: <i class="fa-solid fa-bed"></i> <%= proyecto.ambientes %></div>
-        <div class="supHome">BAÑO: <i class="fa-solid fa-shower"></i> <%= proyecto.baños %></div>
-      </div>
-      <div class="casaHome"><%= proyecto.nombre %></div>
-      <div class="casaHome">¡ENTREGA PROGRAMADA!</div>
-      <div class="adhesionHome">Adhesión: $<%= proyecto.adhesion %></div>
-      <div class="cuotasHome">
-        <div class="tituloCuotasHome">CANTIDAD DE CUOTAS</div>
-        <div><input type="checkbox">&nbsp 120 cuotas</div>
-        <div><input type="checkbox">&nbsp 240 cuotas</div>
-      </div>
-      <div class="valoresCuotasHome">
-        <p>Cuotas de</p><p class="montoCuotaHome">$22222</p>
-        <p>Precio de Lista</p><p class="montoCuotaHome"><%= proyecto.precio %></p>
-        <p>Precio Promoción(contado)</p><p class="montoCuotaHome">$<%= (proyecto.precio)*0.90 %></p> <!--  Precio con descuento del 10% -->
-      </div>
-      <div class="botonesContainerHome">
-        <button class=""><a href="">VER MÁS</a>
-        <button class=""><a href="">CONSULTAR</a>
-      </div>
-    </div>
-    <% }) %>
-    
-  <br>
-  <br>
-  <br>
-  <br>
-
+    <br>
+    <br>
+    <br>
+    <br>
+   
   </body>
 
   <footer>
