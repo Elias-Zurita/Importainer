@@ -136,6 +136,30 @@ const proyectosController = {
         const categorias = await db.Categoria.findAll();
             return res.render("proyectos/proyectosCreate", {categorias})
     },
+    guardado: async function(req, res) {
+        const proyectoCreado = await db.Proyecto.create({
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            superficie: req.body.superficie,
+            ambientes: req.body.ambientes,
+            baños: req.body.baños,
+            adhesion: req.body.adhesion,
+            resumen: req.body.resumen,
+            detalle_baño: req.body.detallebaño,
+            cocina: req.body.detallecocina,
+            aberturas: req.body.detalleaberturas,
+            revestimientos: req.body.revestimientos,
+            equipamiento: req.body.equipamiento,    
+            instalacion_electrica:req.body.instalacion_electrica,
+            instalacion_agua:req.body.instalacion_agua, 
+            tipos_de_pisos: req.body.tipos_de_pisos,
+            
+            imagenes: req.file.filename,
+            categoria_id: req.body.categoria            
+        })
+        res.redirect("/proyectos/categorias"); 
+    }
  }
 
 module.exports = proyectosController;
