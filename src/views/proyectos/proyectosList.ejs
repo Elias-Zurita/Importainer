@@ -38,7 +38,7 @@
           </div>
       </div>
       <div class="valoresCuotasHome">
-        <p>Cuotas de</p><p class="montoCuotaHome">$<%= (proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050 %></p> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
+        <p>Cuotas de</p><p class="montoCuotaHome">$<%= ((proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050).toFixed(2) %></p> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
         <p>Precio de Lista</p><p class="montoCuotaHome"><%= proyecto.precio %></p>
         <p>Precio Promoción(contado)</p><p class="montoCuotaHome">$<%= (proyecto.precio)*0.90 %></p> <!--  Precio con descuento del 10% -->
       </div>

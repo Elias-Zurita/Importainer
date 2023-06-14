@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs') %>  <!--  Incluye el HEAD  -->
+  </head>
+
+  <header>
+    <%- include('../partials/header.ejs') %>  <!--  Incluye el HEADER  -->
+  </header>
+
+  <body>
+    
+    <form action="/proyectos/create" method="POST" class="formularioLog" enctype="multipart/form-data">
+        <div class="createEntregas">
+
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="form-control">
+
+            <label>Precio</label>
+            <input type="text" name="precio" class="form-control">
+
+            <label>Descripción</label>
+            <input type="text" name="descripcion" class="form-control">
+        
+            <label>Superficie</label>
+            <input type="text" name="superficie" class="form-control">
+            
+            <label>Ambientes</label>
+            <input type="text" name="ambientes" class="form-control">
+
+            <label>Baños</label>
+            <input type="text" name="baños" class="form-control">
+
+            <label>Adhesión</label>
+            <input type="text" name="adhesion" class="form-control">
+
+            <label>Resumen</label>
+            <input type="text" name="resumen" class="form-control">
+
+            <label>Detalle del baño</label>
+            <input type="text" name="detallebaño" class="form-control">
+
+            <label>Detalle Cocina</label>
+            <input type="text" name="detallecocina" class="form-control">
+
+            <label>Detalle Aberturas</label>
+            <input type="text" name="detalleaberturas" class="form-control">
+
+            <label>Revestimientos</label>
+            <input type="text" name="revestimientos" class="form-control">
+
+            <label>Equipamiento</label>
+            <input type="text" name="equipamiento" class="form-control">
+
+            <label>Ubicación</label>
+            <input type="text" name="ubicacion" class="form-control">
+
+            <label>Instalacion Eléctrica</label>
+            <input type="text" name="instalacion_electrica" class="form-control">
+
+            <label>Instalacion de Agua</label>
+            <input type="text" name="instalacion_agua" class="form-control">
+
+            <label>Tipos de pisos</label>
+            <input type="text" name="tipos_de_pisos" class="form-control">
+
+            <!--  CON ESTO NO ANDA
+            <label>Video</label>
+            <input type="file" name="video" class="form-control">
+            -->
+
+            <label>Imagenes</label>
+            <input type="file" name="imagen" class="form-control">
+
+            <label>Categoria</label>
+            <select 
+                name="categoria" 
+                class="form-select">
+                    <option value=""></option>
+                        <% categorias.forEach(categoria=>{ %> 
+                            <option value= "<%= categoria.id %>"
+                            <%= locals.oldData && (categoria === oldData.categoria) ? 'select' : null %> >    
+                            <%= categoria.nombre %>    
+                            </option>
+                        <% }) %>
+            </select>
+
+        </div>
+
+        <div class="botonCreate">
+          <button 
+              type="submit">SUBIR PROYECTO
+          </button>
+      </div>
+
+    </form>
+      
+  </body>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
+  </footer>
+
+</html>
