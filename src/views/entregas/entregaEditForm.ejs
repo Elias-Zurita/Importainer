@@ -10,6 +10,8 @@
 
   <body>
     
+    <h1>EDICIÓN DE ENTREGA</h1>
+
     <form action="/entregas/edit/<%= entrega.id %>" method="POST" class="formularioLog" enctype="multipart/form-data">
         <div class="createEntregas">
 
@@ -47,23 +49,19 @@
                 name="imagen"
                 class="form-control">
 
+          <div class="botonEntregas">
+            <button type="button" class="btn btn-primary">EDITAR ENTREGA!</button>
+          </div>
         </div>
-
-        <div class="botonCreate">
-          <button 
-              type="submit">EDITAR PRODUCTO
-          </button>
-      </div>
 
     </form>
     
     <form action="/entregas/delete/<%= entrega.id %>" method="POST" class="formularioLog">
       <div class="botonCreate">
-        <button 
-            type="submit">ELIMINAR ENTREGA
-        </button>
+        <button type="submit" class="btn btn-primary">ELIMINAR ENTREGA</button>
       </div>
     </form>
+ 
 
   </body>
 

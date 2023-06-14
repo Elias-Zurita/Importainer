@@ -10,69 +10,69 @@
 
   <body>
     
+    <h1>CREACIÓN DE PROYECTO NUEVO</h1>
+    
     <form action="/proyectos/create" method="POST" class="formularioLog" enctype="multipart/form-data">
-        <div class="createEntregas">
+        <div class="bodyCreateProyecto">
+          <div class="columna1">
+            <label>NOMBRE:</label>
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese aqui el nombre">
 
-            <label>Nombre</label>
-            <input type="text" name="nombre" class="form-control">
+            <label>PRECIO:</label>
+            <input type="text" name="precio" class="form-control" placeholder="Ingrese aqui el precio">
 
-            <label>Precio</label>
-            <input type="text" name="precio" class="form-control">
-
-            <label>Descripción</label>
-            <input type="text" name="descripcion" class="form-control">
+            <label>DESCRIPCIÓN:</label>
+            <input type="text" name="descripcion" class="form-control" placeholder="Ingrese aqui la descripcion">
         
-            <label>Superficie</label>
-            <input type="text" name="superficie" class="form-control">
+            <label>SUPERFICIE:</label>
+            <input type="text" name="superficie" class="form-control" placeholder="Ingrese aqui los mts de superficie">
             
-            <label>Ambientes</label>
-            <input type="text" name="ambientes" class="form-control">
+            <label>AMBIENTES:</label>
+            <input type="text" name="ambientes" class="form-control" placeholder="Ingrese aqui la cantidad de ambientes">
 
-            <label>Baños</label>
-            <input type="text" name="baños" class="form-control">
+            <label>BAÑOS:</label>
+            <input type="text" name="baños" class="form-control" placeholder="Ingrese aqui la cantidad de baños">
 
-            <label>Adhesión</label>
-            <input type="text" name="adhesion" class="form-control">
+            <label>ADHESIÓN:</label>
+            <input type="text" name="adhesion" class="form-control" placeholder="Ingrese aqui el precio de adhesion">
 
-            <label>Resumen</label>
-            <input type="text" name="resumen" class="form-control">
+            <label>RESUMEN:</label>
+            <input type="text" name="resumen" class="form-control" placeholder="Ingrese aqui el resumen">
 
-            <label>Detalle del baño</label>
-            <input type="text" name="detallebaño" class="form-control">
+            <label>DETALLE DEL BAÑO:</label>
+            <input type="text" name="detallebaño" class="form-control" placeholder="Ingrese aqui el detalle del baño">
+          </div>
+          <div class="columna2">
+            <label>DETALLE DE LA COCINA:</label>
+            <input type="text" name="detallecocina" class="form-control" placeholder="Ingrese aqui el detalle de la cocina">
 
-            <label>Detalle Cocina</label>
-            <input type="text" name="detallecocina" class="form-control">
+            <label>DETALLE DE ABERTURAS:</label>
+            <input type="text" name="detalleaberturas" class="form-control" placeholder="Ingrese aqui el detalle de las aberturas">
 
-            <label>Detalle Aberturas</label>
-            <input type="text" name="detalleaberturas" class="form-control">
+            <label>REVESTIMIENTOS:</label>
+            <input type="text" name="revestimientos" class="form-control" placeholder="Ingrese aqui el detalle de los revestimientos">
 
-            <label>Revestimientos</label>
-            <input type="text" name="revestimientos" class="form-control">
+            <label>EQUIPAMIENTO:</label>
+            <input type="text" name="equipamiento" class="form-control" placeholder="Ingrese aqui el equipamiento">
 
-            <label>Equipamiento</label>
-            <input type="text" name="equipamiento" class="form-control">
+            <label>INSTALACIÓN ELÉCTRICA:</label>
+            <input type="text" name="instalacion_electrica" class="form-control" placeholder="Ingrese aqui la instalacion electrica">
 
-            <label>Ubicación</label>
-            <input type="text" name="ubicacion" class="form-control">
+            <label>INSTALACIÓN DE AGUA:</label>
+            <input type="text" name="instalacion_agua" class="form-control" placeholder="Ingrese aqui la instalacion del agua">
 
-            <label>Instalacion Eléctrica</label>
-            <input type="text" name="instalacion_electrica" class="form-control">
-
-            <label>Instalacion de Agua</label>
-            <input type="text" name="instalacion_agua" class="form-control">
-
-            <label>Tipos de pisos</label>
-            <input type="text" name="tipos_de_pisos" class="form-control">
+            <label>TIPOS DE PISOS:</label>
+            <input type="text" name="tipos_de_pisos" class="form-control" placeholder="Ingrese aqui los tipos de pisos">
 
             <!--  CON ESTO NO ANDA
             <label>Video</label>
             <input type="file" name="video" class="form-control">
             -->
 
-            <label>Imagenes</label>
+            <label>IMAGENES:</label>
             <input type="file" name="imagen" class="form-control">
 
-            <label>Categoria</label>
+            <label>CATEGORIA:</label>
             <select 
                 name="categoria" 
                 class="form-select">
@@ -84,14 +84,14 @@
                             </option>
                         <% }) %>
             </select>
+            
+          </div>
 
         </div>
 
         <div class="botonCreate">
-          <button 
-              type="submit">SUBIR PROYECTO
-          </button>
-      </div>
+          <button type="submit" class="btn btn-primary">SUBIR PROYECTO</button>
+        </div>
 
     </form>
       

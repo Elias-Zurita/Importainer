@@ -20,11 +20,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 const mainRoutes = require('./src/routes/mainRoutes');
 const proyectosRoutes = require('./src/routes/proyectosRoutes');
 const entregasRoutes = require('./src/routes/entregasRoutes');
+const usuariosRoutes = require('./src/routes/usuariosRoutes');
 
 // Rutas
 app.use('/', mainRoutes);
 app.use('/proyectos', proyectosRoutes);
 app.use('/entregas', entregasRoutes);
+app.use('/usuario', usuariosRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

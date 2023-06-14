@@ -10,27 +10,28 @@
 
   <body>
     
+    <h1>CREACIÓN DE NUEVA ENTREGA</h1>
+
     <form action="/entregas/create" method="POST" class="formularioLog" enctype="multipart/form-data">
         <div class="createEntregas">
+            <label>NOMBRE</label>
+            <input type="text" name="nombre" class="form-control" placeholder="Escribe aqui el nombre">
 
-            <label>Nombre</label>
-            <input type="text" name="nombre" class="form-control">
-
-            <label>Descripción</label>
-            <input type="text" name="descripcion" class="form-control">
+            <label>DESCRIPCIÓN</label>
+            <input type="text" name="descripcion" class="form-control" placeholder="Escribe aqui la descripcion">
             
-            <label>Superficie</label>
-            <input type="text" name="superficie" class="form-control">
+            <label>SUPERFICIE</label>
+            <input type="text" name="superficie" class="form-control" placeholder="Escribe aqui la superficie">
 
-            <label>Ubicación</label>
-            <input type="text" name="ubicacion" class="form-control">
+            <label>UBICACIÓN</label>
+            <input type="text" name="ubicacion" class="form-control" placeholder="Escribe aqui la ubicacion">
 
-            <label>Enlace del video de youtube</label>
-            <input type="text" name="video" class="form-control">
+            <label>ENLACEL DEL VIDEO</label>
+            <input type="text" name="video" class="form-control" placeholder="Escribe aqui el enlace">
 
-            <label>Modelo</label>
+            <label>MODELO</label>
             <select 
-                name="modelo" 
+                name="modelo"
                 class="form-select">
                     <option value=""></option>
                         <% modelos.forEach(modelo=>{ %> 
@@ -41,19 +42,17 @@
                         <% }) %>
             </select>
 
-            <label>Imagen</label>
+            <label>IMAGEN</label>
             <input 
                 type="file"
                 name="imagen"
                 class="form-control">
 
-        </div>
+            <div class="botonEntregas">
+              <button type="button" class="btn btn-primary">SUBIR ENTREGA!</button>
+            </div>
 
-        <div class="botonCreate">
-          <button 
-              type="submit">SUBIR PRODUCTO
-          </button>
-      </div>
+        </div>
 
     </form>
       
