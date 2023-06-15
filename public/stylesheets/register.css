@@ -6,7 +6,7 @@ h1{
 .bodyRegister{
     width: 50%;
     margin: 2% auto 3% auto;
-    padding: 10px 50px 20px 50px;
+    padding: 10px 50px 3px 50px;
     box-shadow: 0 0 20px rgba(0,0,0, 0.2);
     border-radius: 10px;
 }
@@ -21,4 +21,12 @@ h1{
 .botonRegister{
     text-align: center;
     margin: 3% 0% 0% 0%;
+}
+.tengoCuenta {
+    text-align: center;
+    margin-bottom: 1%;
+}
+.tengoCuenta a:hover{
+    color: blue;
+    font-weight: bold;
 }

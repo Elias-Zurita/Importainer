@@ -5,6 +5,9 @@ const {Op} = require("sequelize");
 const controller = {
     register: async function(req, res){
         return res.render("usuarios/register")
+    },
+    login: async function(req, res){
+        return res.render("usuarios/login")
     }
  }
 

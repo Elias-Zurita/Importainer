@@ -43,3 +43,27 @@ nav{
 button .navbar-toggler{
     color: red;
 }
+.offcanvas-body a{
+    color: white;
+}
+.nav-link a{
+    color: white;
+}
+.fa-instagram{
+    color: rgb(252, 101, 126);
+}
+.fa-linkedin{
+    color: #005182;
+}
+.fa-facebook{
+    color: #2d5f9a
+}
+.fa-whatsapp{
+    color: rgba(37,211,102,1) !important;
+}
+.fa-youtube{
+    color: rgb(255, 0, 0);
+}
+.fa-envelope{
+    color:white
+}

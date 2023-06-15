@@ -1,0 +1,32 @@
+.bodyLogin{
+    width: 25%;
+    margin: 2% auto 3% auto;
+    padding: 10px 50px 20px 50px;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+}
+.botonLogin{
+    text-align: center;
+}
+.botonLogin button{
+    margin: 1% 0% 2% 0%;
+    width: 50%;
+}
+.campoParaOjo{
+    position: relative;
+    margin-top: 1.5%;
+}
+.mb-3 span {  /* ojo de password */
+    position: absolute;
+    right: 15px;
+    top: 70%;
+    transform: translateY(-50%);  /* centra el ojo sobre el eje Y */
+    cursor: pointer;  /* el mouse se pone en modo hipervinculo al pasar sobre el ojo */
+    display: none;/* asi no se ve a menos que escriba la contraseña */
+}
+.mb-3 span i.hide-eye:before{
+    content: "\f070";            /* aplica la cruz al ojo */
+}
+.mb-3 input:valid ~ span{   
+    display: block;         /* Hace que aparezca el span (el ojo) al ingresar password */
+}
