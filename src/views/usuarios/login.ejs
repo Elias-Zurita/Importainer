@@ -13,22 +13,44 @@
         <h1>INICIAR SESIÓN</h1>
 
         <div class="bodyLogin">
-            <form>
+            <form method="POST" action= "/usuario/login" class="loginBody">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label">CORREO ELECTRÓNICO</label>
+                    <input 
+                        type="email" 
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        id="nombreUsuario" 
+                        name="email"
+                        aria-describedby="emailHelp" 
+                        placeholder="Escribe aqui tu email"
+                        value="<%= locals.oldData ? oldData.email: null %>">
                     <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                    <% if (locals.errors && errors.email) {%>   <!-- Si en las variables locales vino errors y si en erros vino un error en email -->
+                        <div class="text-danger">
+                            <p><%= errors.email.msg %></p> <!-- muestra el mensaje que debe llenar el campo de email -->
+                        </div>
+                    <% } %>  
                 </div>
                 <div class="mb-3 campoParaOjo">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" name="contraseña" class="form-control" id="contraseña" required>
-                    <span><i 
-                        class="fas fa-eye" 
-                        id="Eye"></i>
-                    </span>
+                    <label for="exampleInputPassword1" class="form-label">CONTRASEÑA</label>
+                    <input 
+                        type="password"
+                        name="contraseña" 
+                        class="form-control <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>" 
+                        id="contraseña" 
+                        placeholder="Escribe aqui la contraseña" 
+                        >
+                        <span><i 
+                            class="fas fa-eye" 
+                            id="Eye"></i>
+                        </span>
                 </div>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <input 
+                        type="checkbox" 
+                        class="form-check-input" 
+                        id="recordarUsuario"
+                        name="recordarUsuario">
                     <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                 </div>
                 <div class="botonLogin">

@@ -12,8 +12,8 @@
     
         <h1>CREA TU CUENTA!</h1>
 
-        <form>
-
+        <form action="/usuario/register" method="POST" class="formularioLog"> 
+          
             <div class="bodyRegister">
                 <label>NOMBRE:</label>
                 <input type="text" name="nombre" class="form-control" placeholder="Escribe aqui tu nombre">
@@ -21,20 +21,14 @@
                 <label>APELLIDO:</label>
                 <input type="text" name="apellido" class="form-control" placeholder="Escribe aqui tu apellido">
 
-                <label>FECHA DE NACIMIENTO:</label>
-                <input type="text" name="fecha_de_nacimiento" class="form-control" placeholder="Escribe aqui tu fecha de nacimiento">
-
-                <label>DOMICILIO:</label>
-                <input type="text" name="domicilio" class="form-control" placeholder="Escribe aqui tu domicilio">
-
                 <label>EMAIL:</label>
-                <input type="text" name="email" class="form-control" placeholder="Escribe aqui tu email">
+                <input type="email" name="email" class="form-control" placeholder="Escribe aqui tu email">
 
                 <label>CONTRASEÑA:</label>
-                <input type="text" name="contraseña" class="form-control" placeholder="Escribe aqui tu contraseña">
+                <input type="password" name="contraseña" class="form-control" placeholder="Escribe aqui tu contraseña">
 
                 <div class="botonRegister">
-                    <button type="button" class="btn btn-info">REGISTRARSE!</button>
+                    <button type="submit" class="btn btn-info" >REGISTRARSE!</button>
                 </div>
 
                 <br>

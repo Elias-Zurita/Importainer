@@ -11,7 +11,7 @@ footer{
     width: 100%;
     height: 40px;
     text-align: center;
-    padding-bottom: 6%;
+    padding-bottom: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@ footer{
     font-size: 18px;
 }
 .redes{
-    border: yellow solid;
+    border: yellow solid 1px;
 }
 .redes a{
     color: #fff;
