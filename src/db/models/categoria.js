@@ -10,6 +10,9 @@ module.exports = function(sequelize, dataTypes){
             nombre: {
                 type: dataTypes.STRING
             },
+            slug: {
+                type: dataTypes.STRING // se utiliza para usar como url el nombre que se le asigna
+            }
         }
         
         let config = {

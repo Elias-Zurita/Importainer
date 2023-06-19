@@ -9,22 +9,23 @@ DROP TABLE IF EXISTS categoria;
 CREATE TABLE IF NOT EXISTS categoria (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   nombre varchar(100) NOT NULL,
+  slug varchar (100) NOT NULL,
   created_at TIMESTAMP NULL DEFAULT NULL,
   updated_at TIMESTAMP NULL DEFAULT NULL
 );
 
 -- Ingreso de datos a categoria
-INSERT INTO categoria (`id`, `nombre`, `created_at`, `updated_at`) VALUES
-(1, 'Casa Classic', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(2, 'Casa Comfort', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(3, 'Casa Premium', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(4, 'Casa de Campo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(5, 'Casa Tiny', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(6, 'Duplex', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(7, 'Combo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(8, 'Exteriores', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(9, 'Emprendimientos', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
-(10, 'Oficinas', '2023-06-06 09:00:00', '2023-06-06 09:00:00');
+INSERT INTO categoria (`id`, `nombre`, `slug`, `created_at`, `updated_at`) VALUES
+(1, 'Casa Classic','classic', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(2, 'Casa Comfort','comfort', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(3, 'Casa Premium', 'premium', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(4, 'Casa de Campo', 'campo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(5, 'Casa Tiny', 'tiny', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(6, 'Duplex', 'duplex', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(7, 'Combo', 'combo', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(8, 'Exteriores', 'exteriores', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(9, 'Emprendimientos', 'emprendimientos', '2023-06-06 09:00:00', '2023-06-06 09:00:00'),
+(10, 'Oficinas', 'oficinas', '2023-06-06 09:00:00', '2023-06-06 09:00:00');
 
 DROP TABLE IF EXISTS proyecto;
 -- Creacion de tabla de proyecto
