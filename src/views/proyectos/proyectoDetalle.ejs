@@ -58,27 +58,68 @@
 
       <div class="fichaTitulo">Ficha Técnica</div>
 
-      <div class="fichaTecnica">
-        <div class="fichaSecciones">
-          <ul>
-            <li>Resumen</li>
-            <li>Baño</li>
-            <li>Cocina</li>
-            <li>Aberturas</li>
-            <li>Revestimiento</li>
-            <li>Equipamiento</li>
-            <li>Instalacion Eléctrica</li>
-            <li>Instalacion agua</li>
-            <li>Pisos</li>
-          </ul>
+      <!--  ---------------- seccion de w3school ----------------  -->
+      <div class="w3Tabs">
+      
+        <div class="w3-bar-block w3-black w3-card">
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Resumen')">Resumen</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Baño')">Baño</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Cocina')">Cocina</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Aberturas')">Aberturas</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Revestimiento')">Revestimiento</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Equipamiento')">Equipamiento</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Instalacion_electrica')">Instalación Eléctrica</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Instalacion_agua')">Instalación de Agua</button>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Pisos')">Pisos</button>
         </div>
-        <div class="fichaInfo">
-          <p>sdfsdffddfsdfs</p>
-          <p>sdfsdffddfsdfs</p>
-          <p>sdfsdffddfsdfs</p>
-          <p>sdfsdffddfsdfs</p>
-          <p>sdfsdffddfsdfs</p>
+        
+        <div class="infoSecciones">
+          <div id="Resumen" class="w3-container city w3-animate-zoom parrafoResumen" style="display:block">
+            <h2>Resumen</h2>
+            <p><%= proyecto.resumen %></p>
+          </div>  
+        
+          <div id="Baño" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Baño</h2>
+            <p><%= proyecto.detalle_baño %></p>
+          </div>   
+        
+          <div id="Cocina" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Cocina</h2>
+            <p><%= proyecto.cocina %></p>
+          </div>
+        
+          <div id="Aberturas" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Aberturas</h2>
+            <p><%= proyecto.aberturas %></p>
+          </div>
+
+          <div id="Revestimiento" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Revestimiento</h2>
+            <p><%= proyecto.revestimientos %></p>
+          </div>
+
+          <div id="Equipamiento" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Equipamiento</h2>
+            <p><%= proyecto.equipamiento %></p>
+          </div>
+
+          <div id="Instalacion_electrica" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Instalación Eléctrica</h2>
+            <p><%= proyecto.instalacion_electrica %></p>
+          </div>
+        
+          <div id="Instalacion_agua" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Instalación del Agua</h2>
+            <p><%= proyecto.instalacion_agua %></p> 
+          </div>
+        
+          <div id="Pisos" class="w3-container city w3-animate-zoom" style="display:none">
+            <h2>Pisos</h2>
+            <p><%= proyecto.tipos_de_pisos %></p>
+          </div>
         </div>
+
       </div>
 
       <div class="videoProyecto">
@@ -88,7 +129,9 @@
     </div>
 
   </body>
-  <script src="/js/cuotas.js"></script>
+
+  <script src="/js/proyectoDetalle.js"></script>
+
   <footer>
     <%- include('../partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
   </footer>

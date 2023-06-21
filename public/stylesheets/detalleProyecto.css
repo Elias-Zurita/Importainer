@@ -57,37 +57,39 @@
     border: none
 }
 .fichaTitulo{
-    margin: 5% 0 1% 5%;
+    margin: 2% 0% 1% 5%;
+    font-size: 22px;
+    font-weight: bold;
 }
-.fichaTecnica{
-    background-color: black;
-    color: white;
+/* Caja padre de secciones  */
+.w3Tabs{
+    border: violet solid 1px;
     width: 90%;
-    display: flex;
-    margin-bottom: 5%;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 4%;
+    display: flex;
 }
-.fichaSecciones{
-    width: 20%;
-    font-size: 18px;
-}
-.fichaSecciones ul{
-    text-align: center;
-    padding: 3%
-}
-.fichaSecciones li{
+/* Columna con secciones */
+.w3-bar-block .w3-bar-item {
+    border-bottom: gray solid 1px;
     padding: 4%;
-    border-bottom: white solid 2px;
-    list-style: none;
-    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    width: 350px; /* va a mantener la columna del mismo ancho indistinto de la info que tenga la seccion */
 }
-.fichaSecciones li:hover{
-    background-color: blue;
+
+/* Info que trae de la seccion  */
+.w3-container{ 
+    color: white;
+    background-color:black;
+    width: 100%;
+    border: blue solid 2px;
+    padding: 2% 3% 2% 3%;
 }
-.fichaInfo{
-    padding:3% 2% 2% 5%
+.infoSecciones{
+    background-color:black;
+    width: 100%;
 }
 .videoProyecto{
     width: 85%;
