@@ -51,7 +51,7 @@
                 <div class="valorCuota">$<%= ((proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050).toFixed(2) %></div> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
             </div>
             <div class="botonFinanciala">
-              <button><strong><a>FINANCIALA HOY! <i class="fa-solid fa-message"></i></a></strong></button>
+              <button><strong><a href="https://wa.me/5491122763820?text=" target="_blank">FINANCIALA HOY! <i class="fa-solid fa-message"></i></a></strong></button>
             </div>
           </div>
       </div>
@@ -124,6 +124,11 @@
 
       <div class="videoProyecto">
         <video src="/videos/<%= proyecto.video %>" controls></video> <!--  "controls" permite reproducir y controlar el video -->
+      </div>
+
+      <div class="solicitaDetalle">
+        <div>¡EMPEZÁ A CONSTRUIR TU SUEÑO!</div>
+        <button><a href="https://wa.me/5491122763820?text=" target="_blank">¡SOLICITÁ TU PRESUPUESTO! <i class="fa-solid fa-message"></i></a></button>
       </div>
 
     </div>
