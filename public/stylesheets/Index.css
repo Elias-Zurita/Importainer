@@ -90,7 +90,7 @@ a {
   padding: 2% 6% 1% 6%;
 }
 .cajaContainerHome{
-  width: 550px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   color: black;
@@ -109,6 +109,9 @@ a {
   font-size: 30px;
   margin: 1% 1%;
   height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .entregaHome{
   text-align: center;
@@ -183,6 +186,7 @@ a {
 }
 .masProyectosHome{
   width: 30%;
+  margin: 0 auto 3% auto; 
 }
 .masProyectosHome button{
   font-size: 20px;
@@ -194,130 +198,422 @@ a {
   width: 100%;
 }
 
-/* --- SECCION ACERCA --- */
-.acercaHome{
-  margin: 2% 0 2% 0;
-  background: black;
+/* --- SECCION EXPERIENCIA --- */
+.seccionExperienciaHome{
+  width: 100%;
+  border: RED solid 2px;
+  text-align: center;
+  background: url(/images/index/trama-fondo-01.png);
+  background-size: cover;
+}
+.tituloExperiencia{
+  font-size: 60px;
+  font-weight: bold;
+  margin: 2% 2%;
+  margin-top: 4%;
+  font-family: "Poppins";
+}
+.cajasExpercienciasHome{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 5%;
+}
+.cajaExperiencia{
+  width: 290px;
+  height: auto;
+  border: RED solid 2px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 4%;
+  padding: 1%
+}
+.experienciaImagen{
+  height: 165px;
+  border: red solid 2px;
+}
+.experienciaImagen img{
+  height: 100%
+}
+.experienciaTitulo{
+  width: 80%;
+  background-color: black;
   color: white;
+  padding: 0.5%;
+  margin: 4% auto 7% auto;
+  font-size: 20px;
+  height: 65px;
   display: flex;
   flex-direction: column;
-  border: green solid;
-  padding-bottom: 3%;
+  justify-content: space-around /* centra en el eje Y */
 }
-.imagenYtextoAcerca{
-  border: blue solid;
-  display: flex;
-  flex-direction: row;
+.experienciaTexto{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.cajaPadreExperienciaImagenes{
   width: 100%;
-  padding: 4% 2% 2% 2%;
-}
-.imagenAcercaHome{
-  width:50%;
-  text-align: center;
-}
-.imagenAcercaHome img{
-  width:90%;
-  border: yellow solid;
-}
-.textoAcercaHome{
-  width: 50%;
-  border: purple solid;
-  text-align: justify;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-right: 4%;
-  padding-left: 4%;
-}
-.tituloAcerca{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-
-
-.botonBeneficios{
-  text-align: end;
-  margin-top:2%
-}
-.botonBeneficios button{
-  padding: 7px;
-  width: 15%;
-  color: white;
-  background-color:black;
-  border: #d93737 solid;
-}
-.serviciosTitulo{
-  font-size: xx-large;
-  margin: 0 0 1% 4%;
-  font-weight: bold;
-}
-.cajasServicios{
-  border: red solid 1px;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 3%;
-}
-.tarjetaServicios{
-  width: 25%;
-  box-shadow: 0 0 5px rgba(0,0,0,.5);
-  text-align: center;
-  padding: 1% 1% 0.5% 1%;
-}
-.imagenServicios img{
-  width: 30%;
-}
-.tituloServicio{
-  font-size: large;
-  font-weight: bold;
-}
-.textoServicio{
-  font-size:large
-}
-
-/* --- Seccion entregas --- */
-.tituloEntregasHome{
-  text-align: center;
-  font-size: x-large;
-}
-.seccionEntregasHome{
-  border: rgb(0, 183, 255) solid 1px;
-  margin-bottom: 3%;
-  margin-top: 1%;
+  border:violet solid 2px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  /* apila las cajas si no entran en la resolucion (img debe estar en px) */
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 2% 0 2%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
-.tarjetasEntregasHome{
-  width: 430px;
-  height: 250px;
-  box-shadow: 0 0 5px rgba(0,0,0,.5);
-  margin: 0.5% 0.5% 0.5% 0.5%;
+.cajaImagenTextoHome{
+  border: black solid 1px;
+  margin-bottom: 4%;
   position: relative;
-  overflow: hidden; 
+  border: blue solid 1px;
+  width: 45%;
+}
+.imagenExperienciaHome{
+  object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+  width: 100%;
+  border: green solid 4px;
+  width: 100%;
+}
+.imagenExperienciaHome img{
+  height: 400px; /* alto de la imagen del carousel */
+  object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+  width: 100%;
+}
+.cajaTextosExperienciaHome{
+  position: absolute;
+  border: black solid 2px;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  top: 80%;
+  left: 10%;
+}
+.textoExperienciaHome{
+  padding:3%;
+  background-color: white;
+}
+.quieroSaberHomeExperiencia{
+  width: 100%;
+  background-color:#D1D1D1;
+  border-top: black solid 2px;
+  padding: 2% 0 2% 0;
+}
+
+
+/* --- SECCION ASESORARME --- */
+.seccionAsesorarme{
+  border: black 3px solid;
+  width: 100%;
+  padding: 5%;
+  background: url(/images/index/trama-fondo-02.png);
+  background-size: cover; /* expande imagen para que cubra todo el fondo */
+}
+.tituloAsesorarme{
+  text-align: center;
+  font-size:  60px;
+  color: white;
+  background-color: red;
+  margin-top: 8%;
+  margin-bottom: 7%;
+  padding: 1%;
+}
+
+/* --- SECCION CAROUSEL DE TARJETAS CON JSQUERY SCRIPTS --- */
+.carouselConJsQuery{
+  border: black 3px solid;
+  margin: 3%;
+  padding: 1% 1% 7% 1%;
+}
+.hi-slide{
+  position: relative;
+  width: 754px;
+  height:292px;
+  margin:115px auto 0;
+}
+/* flechitas de desplazamiento */
+.hi-slide .hi-next,
+ .hi-slide .hi-prev{
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(194, 169, 29, 0.604);
+  color: black;
+  transition: all 0.7s;
+  font-size: 20px;
+  font-weight: bold;
+}
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover{
+  opacity: 1;
+  background-color: red;
+}
+.hi-slide .hi-prev{
+  left: -70px;
+}
+/* el simbolo para ir hacia la izquierda */
+.hi-slide .hi-prev::before{
+  content: "<";
+}
+.hi-slide .hi-next{
+  right: -70px;
+}
+.hi-slide .hi-next::before{
+  content: ">";
+}
+.hi-slide > ul{
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin:0;
+  padding: 0;
+}
+.hi-slide > ul > li{
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 147px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid violet;
+  background-color: blue;
   cursor: pointer;
 }
-.tarjetasEntregasHome:hover{
-  transition: 0.9s; 
-  transform: translateY(-5%); 
+.hi-slide > ul > li > img{
+  width:100%;
+  height: 100%;
+  background-position: center;
 }
-.tarjetasEntregasHome img{
-  width: 100%;
+
+/* --- SECCION CAROUSEL DE TARJETAS 3D SIN FLECHA --- */
+
+.carousel3D{
+  border: black 3px solid;
+  margin: 3%;
+  padding: 1% 1% 7% 1%;
 }
-.subtituloEntregasIndex{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 20%;
-  padding-left: 20px;
-  text-align: left;
-  color: white;
-  background: rgba(40, 53, 50, 0.8);
+.bodyCarousel3D{
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform:uppercase;
+  background-color: #232533;
+  overflow-x: hidden;
+  height: 100vh;
+  font-family: 'Urbanist', sans-serif;
+}
+.container {
+
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  transform-style: preserve-3d;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards {
+
+  position: relative;
+  height: 500px;
+  width: 430px;
+  margin-bottom: 20px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.cards label {
+
+  position: absolute;
+  width: 430px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.55s ease;
+}
+
+.cards .card{
+
+  position: relative;
+  height: 100%;
+  background-color: #323444;
+  border-radius: 10px;
+  padding: 30px 35px;
+}
+
+.card .image{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .image img{
+
+  border-radius: 5px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+  margin-top: 23px;
+  width: 86%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card .image .dots{
+
+  text-align: center;
+}
+
+.dots div{
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.dots div:nth-child(1){
+
+  background-color: var(--current-color1);
+}
+
+.dots div:nth-child(2){
+
+  background-color: #5B85F9;
+}
+
+.dots div:nth-child(3){
+
+  background-color: #000;
+}
+
+.card .infos{
+
+  display: block;
+  text-align: end;
+  padding-top: 60px;
+}
+
+.infos span{
+
+  display: block;
+}
+
+.infos .name{
+
+  font-size: 30px;
+  color: var(--current-color1);
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  padding-left: 25%;
+  transition: all .6s ease;
+}
+
+.infos .lorem{
+
+  font-size: 15.5px;
+  color: #ECEAED;
+  letter-spacing: 3px;
+}
+
+.card .btn-contact{
+
+  width: 100%;
+  height: 60px;
+  margin: 35px auto;
+  border-radius: 5px;
+  background-color: var(--current-color1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 10px;
+  font-weight: 700;
+  transition: all .7s ease;
+}
+
+.card .socials{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.socials i{
+
+  font-size: 25px;
+  transition: all .7s ease;
+  color: var(--current-color2);
+}
+
+
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(-70%, 0, -220px);
+  --current-color1: #ECEAED;
+  --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4 {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(-35%, 0, -120px);
+  --current-color1: #ECEAED;
+  --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5 {
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
+  transform: translate3d(0, 0, 0);
+  --current-color1: #fad00c;
+  --current-color2: #ECEAED;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1 {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(35%, 0, -120px);
+  --current-color1: #ECEAED;
+  --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2 {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(70%, 0, -220px);
+  --current-color1: #ECEAED;
+  --current-color2: #404457;
 }
