@@ -7,7 +7,7 @@ body {
   }
 
 /* --- SECCION CAJAS CONTAINERS --- */
-.cajaContainerHome{
+.cajaContainerList{
     width:28%;
     display: flex;
     flex-direction: column;
@@ -15,10 +15,10 @@ body {
     margin: 2% auto 2% auto;
     box-shadow: 0 0 5px rgba(0,0,0,.5);
   }
-  .imagenContainerHome img{
+  .imagenContainerList img{
     width: 100%;
   }
-  .detalleContainerHome{
+  .detalleContainerList{
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -28,20 +28,20 @@ body {
     border: black solid;
     width: 95%;
   }
-  .detalleContainerHome i{
+  .detalleContainerList i{
     font-size: large;
   }
-  .casaHome{
+  .casaList{
     text-align: center;
   }
-  .adhesionHome{
+  .adhesionList{
     text-align: center;
     font-weight: bold;
     border-top: red solid;
     border-bottom: red solid;
     padding: 1%;
   }
-  .cuotasHome{
+  .cuotasList{
     width: 90%;
     background-color: hsla(0,0%,91%,.8);
     padding: 0.8%;
@@ -49,7 +49,7 @@ body {
     font-size: 12px;
     font-weight: bold;
   }
-  .valoresCuotasHome{
+  .valoresCuotasList{
     width: 90%;
     background-color: hsla(0,0%,91%,.8);
     padding: 0.8%;
@@ -57,13 +57,13 @@ body {
     display: grid;
     grid-template-columns: repeat(2,1fr);
   }
-  .valoresCuotasHome p{
+  .valoresCuotasList p{
     margin-bottom: 0%
   }
-  .montoCuotaHome{
+  .montoCuotaList{
     text-align: center;
   }
-  .botonesContainerHome{
+  .botonesContainerList{
     display: flex;
     justify-content: space-around;
     border: brown solid;
@@ -72,14 +72,14 @@ body {
     margin-right: auto;
     margin-bottom: 3%;
   }
-  .botonesContainerHome button{
+  .botonesContainerList button{
     width:30%;
     padding: 0.3%;
     background: black;
     height: 3em;
     font-weight: bold;
   }
-  .botonesContainerHome a{
+  .botonesContainerList a{
     color: white;
   }
 

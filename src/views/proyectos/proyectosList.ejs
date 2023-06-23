@@ -12,18 +12,18 @@
   
      <!--  Cajas de containers CON CAMPOS DINAMICOS LISTOS -->
     <% proyectos.forEach(function(proyecto){ %>
-    <div class="cajaContainerHome">
-      <div class="imagenContainerHome"><img src="/images/proyectos/<%= proyecto.imagenes %>"></div>
-      <div class="detalleContainerHome">
-        <div class="supHome">SUP: <i class="fa-solid fa-arrows-left-right-to-line"></i> <%= proyecto.superficie %></div>
-        <div class="supHome">AMB: <i class="fa-solid fa-bed"></i> <%= proyecto.ambientes %></div>
-        <div class="supHome">BAÑO: <i class="fa-solid fa-shower"></i> <%= proyecto.baños %></div>
+    <div class="cajaContainerList">
+      <div class="imagenContainerList"><img src="/images/proyectos/<%= proyecto.imagenes %>"></div>
+      <div class="detalleContainerList">
+        <div class="supList">SUP: <i class="fa-solid fa-arrows-left-right-to-line"></i> <%= proyecto.superficie %></div>
+        <div class="supList">AMB: <i class="fa-solid fa-bed"></i> <%= proyecto.ambientes %></div>
+        <div class="supList">BAÑO: <i class="fa-solid fa-shower"></i> <%= proyecto.baños %></div>
       </div>
-      <div class="casaHome"><%= proyecto.nombre %></div>
-      <div class="casaHome">¡ENTREGA PROGRAMADA!</div>
-      <div class="adhesionHome">Adhesión: $<%= proyecto.adhesion %></div>
-      <div class="cuotasHome">
-        <div class="tituloCuotasHome">CANTIDAD DE CUOTAS</div>
+      <div class="casaList"><%= proyecto.nombre %></div>
+      <div class="casaList">¡ENTREGA PROGRAMADA!</div>
+      <div class="adhesionList">Adhesión: $<%= proyecto.adhesion %></div>
+      <div class="cuotasList">
+        <div class="tituloCuotasList">CANTIDAD DE CUOTAS</div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
@@ -37,12 +37,12 @@
             </label>
           </div>
       </div>
-      <div class="valoresCuotasHome">
-        <p>Cuotas de</p><p class="montoCuotaHome">$<%= ((proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050).toFixed(2) %></p> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
-        <p>Precio de Lista</p><p class="montoCuotaHome"><%= proyecto.precio %></p>
-        <p>Precio Promoción(contado)</p><p class="montoCuotaHome">$<%= (proyecto.precio)*0.90 %></p> <!--  Precio con descuento del 10% -->
+      <div class="valoresCuotasList">
+        <p>Cuotas de</p><p class="montoCuotaList">$<%= ((proyecto.precio/120) + ((proyecto.precio/120)*0.10) + 3050).toFixed(2) %></p> <!--  Cuota total es cuota pura (dividida en 120 o 240) + 10% de esa cuota pura + 3050 gastos adm y seg de vida -->
+        <p>Precio de Lista</p><p class="montoCuotaList"><%= proyecto.precio %></p>
+        <p>Precio Promoción(contado)</p><p class="montoCuotaList">$<%= (proyecto.precio)*0.90 %></p> <!--  Precio con descuento del 10% -->
       </div>
-      <div class="botonesContainerHome">
+      <div class="botonesContainerList">
         <button class=""><a href="/proyectos/detalle/<%= proyecto.id %>">VER MÁS</a>
         <button class=""><a href="">CONSULTAR</a>
       </div>
