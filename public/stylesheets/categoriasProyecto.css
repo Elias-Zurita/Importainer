@@ -1,0 +1,78 @@
+body {
+    color: black;
+  }
+  
+  a {
+    color: black;
+  }
+  .tituloProyectos{
+    margin-top: 6.8%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .cajaProyectos{
+    display: flex;
+    flex-direction: row;
+    width: 90%;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border: red solid;
+  }
+  .cajaTextoProyectos{
+    width: 50%;
+    text-align: justify;
+    padding: 1%;
+  }
+  .tituloContainerProyecto{
+    font-size:x-large;
+  }
+  .cajaCarouselProyectos{
+    width: 50%;
+    border: black solid;
+    overflow: hidden; /* la imagen no se sale de su caja al expandirse con el hover */
+    height: 350px;
+    
+  }
+  .carousel-item {
+    transition: all 2000ms ease-out 0s; /* Velocidad del desplazamiento */
+  }
+  .cajaCarouselProyectos img{
+    height: 350px;
+  }
+  .botonesProyecto{
+    text-align: center;
+  }
+  .botonesProyecto button{
+    width: 25%;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    padding: 0.5%;
+    transition: 0.55s ease-in-out;
+  }
+  .botonesProyecto button:hover{
+    background-color: red;
+  }
+  .modelosProyectosCasas{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100%;
+    padding: 3%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+  }
+  .cajaModeloProyecto{
+    background-color: white;
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+  }
+  .cajaModeloProyecto a{
+    border: violet solid 2px
+  }
+  .tituloCajaModelo{
+    font-size: 20px;
+  }

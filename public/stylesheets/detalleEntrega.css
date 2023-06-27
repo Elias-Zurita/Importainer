@@ -8,6 +8,7 @@ body {
 .bannerEntregaDetalle{
   border: red solid ;
   overflow: hidden; /* la imagen no se sale de su caja al expandirse con el hover */
+  margin-top: 6.8%;
 }
 .bannerEntregaDetalle img{
   width: 100%;

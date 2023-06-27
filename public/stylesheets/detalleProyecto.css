@@ -1,5 +1,5 @@
 .detalleProyectos{
-    padding-top: 5%;
+    margin-top:6.8%
 }
 .proyectoNombreDetalle{
     text-align: center;
@@ -50,16 +50,27 @@
     margin: 2% 0 2% 0;
     text-align: center;
 }
+.botonFinanciala button:hover{
+    background-color:red;
+    color: white;
+}
 .botonFinanciala button{
     width: 30%;
     padding: 0.5%;
     font-size: 18px;
-    border: none
+    border: none;
+    transition: 0.55s ease-in-out;
 }
 .fichaTitulo{
     margin: 2% 0% 1% 5%;
     font-size: 22px;
     font-weight: bold;
+}
+.solicitaDetalle button{
+    transition: 0.55s ease-in-out;
+}
+.solicitaDetalle button:hover{
+    background-color:red;
 }
 /* Caja padre de secciones  */
 .w3Tabs{
