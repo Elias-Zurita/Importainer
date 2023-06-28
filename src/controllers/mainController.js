@@ -4,11 +4,11 @@ const {Op} = require("sequelize");
 
 const controller = {
     index: (req, res) =>{
-        db.Entrega.findAll({
-            include: [{association: "Modelo"}]  
+        db.Proyecto.findAll({
+            include: [{association: "Categoria"}]  
         })
-            .then(function(entregas){   
-                res.render('index', {entregas:entregas})
+            .then(function(proyecto){   
+                res.render('index', {proyecto:proyecto})
             })
     },
     sistemaConstructivo: (req, res) =>{

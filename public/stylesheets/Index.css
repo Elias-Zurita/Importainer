@@ -98,6 +98,7 @@ a {
 }
 .imagenContainerHome img{
   width: 100%;
+  height: 300px;
 }
 .casaHome{
   text-align: center;
@@ -146,6 +147,7 @@ a {
 }
 .form-check-input:checked {
   background-color: black;
+  color: black;
 }
 .valoresCuotasHome{
   width: 90%;

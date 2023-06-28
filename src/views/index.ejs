@@ -43,7 +43,7 @@
               <div class="tituloCarousel">AL MEJOR PRECIO DEL MERCADO</div>
             </div>
             <div class="botonCarousel">
-              <button><a href="" target="_blank">QUIERO HACER REALIDAD MI SUEÑO</button></a>
+              <button><a href="/proyectos/categorias" target="_blank">QUIERO HACER REALIDAD MI SUEÑO</button></a>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
               <div class="tituloCarousel">Y DISFRUTA SUS BENEFICIOS</div>
             </div>
             <div class="botonCarousel">
-              <button><a href="" target="_blank">¡QUIERO CONOCERLAS!</button></a>
+              <button><a href="/proyectos/categorias/comfort" target="_blank">¡QUIERO CONOCERLAS!</button></a>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
               <div class="tituloCarousel">Y SUS DISEÑOS EXCLUSIVOS</div>
             </div>
             <div class="botonCarousel">
-              <button><a href="" target="_blank">¡QUIERO CONOCERLAS!</button></a>
+              <button><a href="/proyectos/categorias/premium" target="_blank">¡QUIERO CONOCERLAS!</button></a>
             </div>
           </div>
         </div>
@@ -101,10 +101,9 @@
 
     <!--  ---------------SECCION CONTAINERS--------------- -->
     <div class="padreCajasContainersHome">
-      
       <!--  Container 1 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
+        <div class="imagenContainerHome"><img src="/images/index/casa-container-15-m2-classic-importainer.jpg"></div>
         <div class="casaHome">CASA CONTAINER 15m2</div>
         <div class="entregaHome">¡ENTREGA PROGRAMADA!</div>
         <div class="detalleContainerHome">
@@ -115,13 +114,13 @@
         <div class="cuotasHome">
           <div class="tituloCuotasHome">Cantidad de cuotas</div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onchange="funcionCheckboxHome()">
             <label class="form-check-label" for="flexRadioDefault1">
               &nbsp 120 cuotas
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked onchange="funcionCheckboxHome()">
             <label class="form-check-label" for="flexRadioDefault2">
               &nbsp 240 cuotas
             </label>
@@ -129,7 +128,8 @@
         </div>
         <div class="valoresCuotasHome">
           <p>Valor de Cuota</p>
-          <p class="montoCuotaHome">$42.397</p>
+          <p id="120cuotas"  class="montoCuotaHome" style="display: block">$ <%= ((4000000/120) + ((4000000/120)*0.10) + 3050).toFixed(2) %></p>
+          <p id="240cuotas"  class="montoCuotaHome" style="display: none">$ <%= ((4000000/240) + ((4000000/240)*0.10) + 3050).toFixed(2) %></p>
         </div>
         <div class="botonesContainerHome">
           <button class="botonQuieroHome" style="background: white; border-right: black solid 0.5px"><a href="">QUIERO EXPLORAR</a>
@@ -139,7 +139,7 @@
 
       <!--  Container 2 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
+        <div class="imagenContainerHome"><img src="/images/index/casa-container-15-m2-pileta-container-15-m2-classic-importainer-1.jpg"></div>
         <div class="casaHome">
           <div>CASA CONTAINER 15m2</div>
           <div>+ PILETA CONTAINER 15m2</div>
@@ -177,7 +177,7 @@
 
       <!--  Container 3 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
+        <div class="imagenContainerHome"><img src="/images/index/casa-container-15-m2-pileta-container-15-m2-quincho-container-15-m2-classic-importainer-1.jpg"></div>
         <div class="casaHome">
           <div>CASA CONTAINER 15m2</div>
           <div>+ PILETA CONTAINER 15m2</div>
@@ -216,7 +216,7 @@
 
       <!--  Container 4 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
+        <div class="imagenContainerHome"><img src="/images/index/duplex-45m2-importainer.JPG"></div>
         <div class="casaHome">DUPLEX CONTAINER 45m2</div>
         <div class="entregaHome">¡ENTREGA PROGRAMADA!</div>
         <div class="detalleContainerHome">
@@ -251,10 +251,8 @@
 
       <!--  Container 5 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
-        <div class="casaHome">
-          <div>PILETA CONTAINER 30m2</div>
-        </div>
+        <div class="imagenContainerHome"><img src="/images/index/pileta-60m2-importainer.JPG"></div>
+        <div class="casaHome">PILETA CONTAINER 30m2</div>
         <div class="entregaHome">¡ENTREGA PROGRAMADA!</div>
         <div class="detalleContainerHome">
           <div class="supHome">AMB <img src="/images/index/icono-cantidad-de-ambientes-01.png"> 0</div>
@@ -288,7 +286,7 @@
 
       <!--  Container 6 -->
       <div class="cajaContainerHome">
-        <div class="imagenContainerHome"><img src="/images/containersHome/casa-container-45-m2-classic-importainer-1.jpg"></div>
+        <div class="imagenContainerHome"><img src="/images/index/local-comercial-60m2-emprendimiento-importainer.JPG"></div>
         <div class="casaHome">
           <div>LOCAL COMERCIAL 60m2</div>
         </div>
@@ -600,6 +598,8 @@
   <footer>
     <%- include('partials/footer.ejs') %>  <!--  Incluye el FOOTER  -->
   </footer>
+  
+  <script src="js/checkboxCuotas.js"></script>
 
  </html>
 
