@@ -11,3 +11,5 @@ function funcionCheckboxHome() {
         document.getElementById("240cuotas").style.display = "block";
     }
 }
+
+

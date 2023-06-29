@@ -41,7 +41,7 @@ footer{
     justify-content: space-around;
     width: 45%;
     margin-left: 10%;
-    font-size: 12px;
+    font-size: 14px;
 }
 .logoFooter{
     width: 20%;
@@ -56,6 +56,7 @@ footer{
 }
 .proyectosFooter{
     width: 30%;
+    margin-left: 3%;
 }
 .seccionesFooter{
     width: 25%;
