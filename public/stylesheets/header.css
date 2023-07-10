@@ -1,18 +1,21 @@
 a {
     text-decoration: none; /* le saca el subrayado a todos los hipervinculos de etiqueta a */
 } 
-* { 
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
+}
+header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 .navbar{
-    padding: 0%;
-    width: 100%;
-    z-index: 999;
     font-family: "Poppins";
-    display: block;
     background-color: white;
+    border: red solid 3px;
+    padding: 0;
 }
 .comunicateHeader{
     background-color: black;
@@ -59,26 +62,32 @@ a {
     margin-top: 0.5%;
     padding: 0%;
     background-color: black;
+    border: violet solid 4px;
 }
 .SeccionesHeader{
     margin-left: auto; 
     margin-right: auto;
     display: flex;
-    list-style:none; /* quita punto de lista*/
-    width: 75%;
+    list-style:none;
+    width: 95%;
+    flex-wrap: wrap;
     justify-content: space-around;
-    font-size: 600;    /*NOSE EN QUE MEDIDAS ESTA, ESTO NO HACE NADA  */
 }
 .SeccionesHeader a{
     color: white;
     font-weight: bold;
     transition: 0.55s ease-in-out;
+    border: blue solid 1px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .SeccionesHeader a:hover{
     color: red;
 }
-button .navbar-toggler{
+.navbar-toggler{
     color: red;
+    display: none;
+    margin-left: auto;
 }
 .offcanvas-body a{
     color: white;
@@ -104,3 +113,14 @@ button .navbar-toggler{
 .fa-envelope{
     color:white
 }
+
+/* Tablet */
+@media (max-width:800px){ 
+    .navbar-toggler{ 
+        display: block;   /* Muestra el burguer menu */
+        border: none;
+    }
+    .SeccionesHeader a{
+        display: none;
+    }
+  }

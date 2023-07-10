@@ -1,5 +1,6 @@
 .bobySistemasConstructivos{
-    margin-top:6.2%
+    border: blue solid 5px;
+    margin-top: 110px;
 }
 .bannerSistemaConstructivo{
     height: 600px; /* alto de la imagen del carousel */
