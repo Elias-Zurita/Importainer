@@ -6,7 +6,7 @@ body {
     color: black;
   }
   .tituloProyectos{
-    margin-top: 6.8%;
+    margin-top: 130px;
     text-align: center;
     font-size: 40px;
   }
@@ -17,7 +17,7 @@ body {
     width: 90%;;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
+    margin-top: 1%;
     border: red solid;
   }
   .cajaTextoProyectos{
