@@ -114,13 +114,13 @@
         <div class="cuotasHome">
           <div class="tituloCuotasHome">Cantidad de cuotas</div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onchange="funcionCheckboxHome()">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1casa" checked onchange="funcionCheckboxHome('casa120cuotas', 'casa240cuotas')">
             <label class="form-check-label" for="flexRadioDefault1">
               &nbsp 120 cuotas
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onchange="funcionCheckboxHome()">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2casa" onchange="funcionCheckboxHome('casa240cuotas', 'casa120cuotas')">
             <label class="form-check-label" for="flexRadioDefault2">
               &nbsp 240 cuotas
             </label>
@@ -128,8 +128,8 @@
         </div>
         <div class="valoresCuotasHome">
           <p>Valor de Cuota</p>
-          <p id="120cuotas"  class="montoCuotaHome" style="display: block">$ <%= ((4000000/120) + ((4000000/120)*0.10) + 3050).toFixed(2) %></p>
-          <p id="240cuotas"  class="montoCuotaHome" style="display: none">$ <%= ((4000000/240) + ((4000000/240)*0.10) + 3050).toFixed(2) %></p>
+          <p id="casa120cuotas"  class="montoCuotaHome" style="display: block">$ <%= ((4000000/120) + ((4000000/120)*0.10) + 3050).toFixed(2) %></p>
+          <p id="casa240cuotas"  class="montoCuotaHome" style="display: none">$ <%= ((4000000/240) + ((4000000/240)*0.10) + 3050).toFixed(2) %></p>
         </div>
         <div class="botonesContainerHome">
           <button class="botonQuieroHome" style="background: white; border-right: black solid 0.5px"><a href="">QUIERO EXPLORAR</a>

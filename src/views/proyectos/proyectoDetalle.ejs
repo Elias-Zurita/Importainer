@@ -91,7 +91,10 @@
         
           <div id="Aberturas" class="w3-container city w3-animate-zoom" style="display:none">
             <h2>Aberturas</h2>
-            <p><%= proyecto.aberturas %></p>
+            <ul><% proyecto.aberturas.split("-").forEach(function(atributo){ %> 
+              <li><%= atributo %></li>
+              <% }) %>
+            </ul>
           </div>
 
           <div id="Revestimiento" class="w3-container city w3-animate-zoom" style="display:none">
