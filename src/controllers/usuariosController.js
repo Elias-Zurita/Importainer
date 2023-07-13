@@ -54,7 +54,7 @@ const controller = {
             return res.redirect("/usuario/login")
         })
     }
-   // processLogin: (req, res, next) => {}
+   
  }
 
 module.exports = controller;
