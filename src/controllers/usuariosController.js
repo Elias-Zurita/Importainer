@@ -53,8 +53,12 @@ const controller = {
         }).then(function(){
             return res.redirect("/usuario/login")
         })
+    },
+    logout: (req, res) => { 
+        res.clearCookie("recordarUsuario"); 
+        req.session.destroy();    
+        return res.redirect("/")         
     }
-   
  }
 
 module.exports = controller;

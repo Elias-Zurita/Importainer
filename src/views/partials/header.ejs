@@ -21,6 +21,23 @@
         <li class="enlaceHeader"><a href="">BLOG</a></li>
         <li class="enlaceHeader"><a href="">PREGUNTAS FRECUENTES</a></li>
         <li class="enlaceHeader"><a href="/contacto">CONTACTO</a></li>
+        <% if (locals.usuario){ %> <!-- Si el usuario esta logueado muestra lo siguiente -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li> <a class="nav-link" href="/usuario/profile"><%= (usuario.nombre).toUpperCase() %> <%= (usuario.apellido).toUpperCase() %></a></li>
+              <li><a class="nav-link" href="/usuario/logout">CERRAR SESIÓN</a></li>
+            </ul>
+          </li>
+        <% } else { %>    <!-- Si no esta logueado muestra lo siguiente -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li> <a class="nav-link" href="/usuario/login">INICIAR SESIÓN</a></li>
+              <li><a class="nav-link" href="/usuario/register">REGISTRARSE</a></li>
+            </ul>
+          </li>
+        <% } %>
       </div>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -28,8 +45,8 @@
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">IMPORTAINER S.A.</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <a class="navbar-brand" href="/"><img src="../../images/logoHeader.png" class="img-fluid"></a>
+          <button type="button" class="botonCerradoHeader" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">

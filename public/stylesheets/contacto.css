@@ -6,7 +6,7 @@ a {
 }
 .contactoPadre{
     display: flex;
-    margin-top: 130px;
+    margin-top: 120px;
 }
 .contactoCampos{
     border: violet solid;

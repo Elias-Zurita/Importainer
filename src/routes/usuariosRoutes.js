@@ -12,7 +12,6 @@ router.post("/register", usuariosController.processRegister);
 router.get("/login", guestMiddleware, usuariosController.login);
 router.post("/login",validations.login, usuariosController.loginProcess);
 router.get("/profile", authMiddleware, usuariosController.profile);
-
-// falta el logout
+router.get("/logout",usuariosController.logout);
 
 module.exports = router;
